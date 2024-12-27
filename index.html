@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página</title>
+  <title>Página Publicitaria del Tatuador</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>¡Hola, Mundo!</h1>
-  <p>Bienvenido a mi página en GitHub Pages.</p>
+  <header>
+    <h1>Tatuajes Artísticos</h1>
+    <p>Descubre las increíbles creaciones de [Nombre del Tatuador]</p>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <div class="carousel-container">
+        <img src="foto1.jpg" alt="Tatuaje 1" class="active">
+        <img src="foto2.jpg" alt="Tatuaje 2">
+        <img src="foto3.jpg" alt="Tatuaje 3">
+        <!-- Agrega más imágenes según sea necesario -->
+      </div>
+      <div class="carousel-controls">
+        <button id="prev">← Anterior</button>
+        <button id="next">Siguiente →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: [Número de Teléfono] | [Correo Electrónico]</p>
+    <p>© 2024 [Nombre del Tatuador]. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
