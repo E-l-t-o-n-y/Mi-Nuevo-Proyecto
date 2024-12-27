@@ -1,85 +1,86 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-  }
-  
-  header {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  header p {
-    margin: 5px 0 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  /* Carousel Section */
-  .carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .carousel-container {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .carousel-container img {
-    width: 100%;
-    display: none;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-container img.active {
-    display: block;
-  }
-  
-  .carousel-controls {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .carousel-controls button {
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-  }
-  
-  .carousel-controls button:hover {
-    background: #555;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    background: #222;
-    color: #fff;
-    padding: 10px 0;
-    margin-top: 20px;
-  }
-  
-  footer p {
-    margin: 5px 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Carousel Section */
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container img {
+  width: 300px; /* Ajusta el tamaño de la imagen cuadrada */
+  height: 300px; /* Cuadrado */
+  object-fit: cover; /* Para asegurar que se vea bien dentro del cuadro */
+  display: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img.active {
+  display: block;
+}
+
+.carousel-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.carousel-controls button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
