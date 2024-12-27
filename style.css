@@ -27,49 +27,26 @@ main {
   padding: 20px;
 }
 
-/* Carousel Section */
-.carousel {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+/* Album Section */
+.album {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.carousel-container {
-  display: flex;
-  overflow: hidden;
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
   width: 100%;
 }
 
-.carousel-container img {
-  width: 300px; /* Ajusta el tamaño de la imagen cuadrada */
-  height: 300px; /* Cuadrado */
-  object-fit: cover; /* Para asegurar que se vea bien dentro del cuadro */
-  display: none;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-container img.active {
-  display: block;
-}
-
-.carousel-controls {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-controls button {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
-.carousel-controls button:hover {
-  background: #555;
+.album-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Footer */
