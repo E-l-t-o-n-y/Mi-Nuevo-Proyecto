@@ -44,7 +44,7 @@ main {
 
 .album-container img {
   width: 100%; /* Ajusta el tamaño para llenar el contenedor */
-  height: 200px; /* Tamaño cómodo y consistente para todas las imágenes */
+  height: 300px; /* Tamaño cómodo y consistente para todas las imágenes */
   object-fit: cover; /* Recorta la imagen si es necesario */
   border-radius: 8px;
 }
