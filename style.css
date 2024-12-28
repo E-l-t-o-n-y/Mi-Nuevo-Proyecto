@@ -82,40 +82,50 @@ footer p {
   margin: 5px 0;
 }
 
-/* Estilos para los botones de redes sociales fijos */
+/* Social Buttons Styles */
 .social-buttons {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* Estilo para los botones en general */
 .social-buttons a {
-  display: block;
-  margin-bottom: 15px;
-}
-
-.whatsapp-button, .instagram-button {
-  background-color: #25d366;
+  display: inline-block;
+  background-color: #25D366; /* Fondo verde para los globos de WhatsApp */
+  border-radius: 50%;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+/* Estilo específico para el botón de Instagram */
+.social-buttons .instagram-button {
+  background-color: #ffffff; /* Fondo rojo para el globo de Instagram */
+}
+
+
+.social-buttons a:hover {
+  background-color: #222; /* Fondo oscuro al pasar el ratón */
+}
+
+.social-buttons img {
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp-button {
+  background-color: #25D366; /* Color característico de WhatsApp */
 }
 
 .instagram-button {
-  background-color: #e4405f;
-}
-
-.whatsapp-button:hover, .instagram-button:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-button img, .instagram-button img {
-  width: 40px;
-  height: 40px;
+  background-color: #E4405F; /* Color característico de Instagram */
 }
