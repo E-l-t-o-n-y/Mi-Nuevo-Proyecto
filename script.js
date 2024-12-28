@@ -1,26 +1,11 @@
-const images = document.querySelectorAll(".carousel-container img");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-
-let currentIndex = 0;
-
-// Show the first image initially
-images[currentIndex].classList.add("active");
-
-// Function to update the displayed image
-function updateCarousel(index) {
-  images.forEach((img, i) => {
-    img.classList.toggle("active", i === index);
-  });
+// Function to open the modal and display the image with its description
+function openImage(imageSrc, description) {
+  document.getElementById("modal-image").src = imageSrc;
+  document.getElementById("modal-description").innerText = description;
+  document.getElementById("image-modal").style.display = "flex";
 }
 
-// Event listeners for buttons
-prevButton.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateCarousel(currentIndex);
-});
-
-nextButton.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateCarousel(currentIndex);
-});
+// Function to close the modal
+function closeImage() {
+  document.getElementById("image-modal").style.display = "none";
+}

@@ -15,24 +15,37 @@
   <main>
     <section class="album">
       <div class="album-container">
-        <div class="image-container">
+        <div class="image-container" onclick="openImage('foto1.png', 'Descripción completa del tatuaje 1...')">
           <img src="foto1.png" alt="Tatuaje 01">
+          <div class="overlay">Mostrar más...</div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onclick="openImage('foto2.png', 'Descripción completa del tatuaje 2...')">
           <img src="foto2.png" alt="Tatuaje 02">
+          <div class="overlay">Mostrar más...</div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onclick="openImage('foto3.png', 'Descripción completa del tatuaje 3...')">
           <img src="foto3.png" alt="Tatuaje 03">
+          <div class="overlay">Mostrar más...</div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onclick="openImage('foto4.png', 'Descripción completa del tatuaje 4...')">
           <img src="foto4.png" alt="Tatuaje 04">
+          <div class="overlay">Mostrar más...</div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onclick="openImage('foto5.png', 'Descripción completa del tatuaje 5...')">
           <img src="foto5.png" alt="Tatuaje 05">
+          <div class="overlay">Mostrar más...</div>
         </div>
       </div>
     </section>
   </main>
+
+  <div id="image-modal" class="image-modal" onclick="closeImage()">
+    <div class="modal-content" onclick="event.stopPropagation()"> <!-- Prevent click from closing modal -->
+      <img id="modal-image" src="" alt="Imagen Ampliada">
+      <p id="modal-description"></p>
+      <span class="close-btn" onclick="closeImage()">X</span>
+    </div>
+  </div>
 
   <footer>
     <p>Contacto: +54 9 387 579-6529 | Yurkatattoo.@gmail.com</p>

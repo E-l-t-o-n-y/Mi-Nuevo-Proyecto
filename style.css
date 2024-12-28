@@ -4,23 +4,49 @@ body {
   margin: 0;
   padding: 0;
   background: #f4f4f4;
-  color: #333;
+  color: #e01717;
 }
 
 header {
-  background: #222;
-  color: #fff;
+  background: linear-gradient(to bottom, #202020, #2e2e2e, #1a1a1a); /* Gradiente invertido (ahora más oscuro arriba) */
+  color: #d6d322;
   text-align: center;
   padding: 20px 10px;
 }
 
+
+
+
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: "Pacifico", cursive; /* Fuente cursiva y elegante */
+  background: linear-gradient(45deg, #ffcc00, #ffdd33, #ffee66, #ffcc00); /* Gradiente dorado */
+  background-size: 200%; /* Para un efecto más dinámico */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Solo se verá el gradiente */
+  text-shadow: 
+    0px 1px 2px rgba(0, 0, 0, 0.8),  /* Sombra fina para profundidad */
+    0px 0px 5px rgba(255, 204, 0, 0.7), /* Resplandor dorado */
+    0px 0px 20px rgba(255, 223, 0, 0.5); /* Resplandor exterior */
+  animation: shine 3s linear infinite; /* Animación de brillo */
 }
 
+/* Animación para simular un brillo que recorre el texto */
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+
+
 header p {
-  margin: 5px 0 0;
+  margin: 10px 0 0;
 }
 
 main {
@@ -53,6 +79,32 @@ main {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for the Images */
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: none;
+  text-align: center;
+}
+
+/* Show overlay on hover */
+.image-container:hover .overlay {
+  display: block;
 }
 
 /* Footer */
@@ -66,6 +118,50 @@ footer {
 
 footer p {
   margin: 5px 0;
+}
+
+/* Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#modal-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.close-btn:hover {
+  background-color: #cc0000;
 }
 
 /* Social Buttons Styles */
