@@ -105,27 +105,20 @@ footer p {
   display: flex;
   justify-content: center; /* Centra la imagen horizontalmente */
   align-items: center; /* Centra la imagen verticalmente */
+  transition: transform 0.2s ease; /* Transición para el efecto de aumento */
 }
 
-/* Estilo específico para el botón de Instagram */
+/* Estilo para el botón de Instagram */
 .social-buttons .instagram-button {
-  background-color: #ffffff; /* Fondo rojo para el globo de Instagram */
+  background-color: #ffffff; /* Fondo característico de Instagram */
 }
 
-
+/* Efecto al pasar el ratón: los botones se agrandan */
 .social-buttons a:hover {
-  background-color: #222; /* Fondo oscuro al pasar el ratón */
+  transform: scale(1.1); /* Aumenta el tamaño del botón en un 10% */
 }
 
 .social-buttons img {
-  width: 40px;
-  height: 40px;
-}
-
-.whatsapp-button {
-  background-color: #25D366; /* Color característico de WhatsApp */
-}
-
-.instagram-button {
-  background-color: #E4405F; /* Color característico de Instagram */
+  width: 30px;
+  height: 30px;
 }
